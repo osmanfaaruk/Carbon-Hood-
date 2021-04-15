@@ -22,7 +22,7 @@ const advantagesData = [
 
 const Advantages = () => {
     return (
-        <section className="services-container mt-5" >
+        <section className="mt-5" >
         <Slide left>
         <div className="text-center mt-5">
             <h1 style={{fontWeight:"700"}}>OUR ADVANTAGES</h1>

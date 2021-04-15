@@ -17,13 +17,10 @@ const Navbar = () => {
               <li className="nav-item ">
                 <a className="nav-link active text-white navbar-a" aria-current="page" href="/">HOME</a>
               </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle text-white" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li className="nav-item">
+                <a className="nav-link text-white" href="/dashboard" tabindex="-1"  role="button" aria-disabled="true">
                   DASHBOARD
                 </a>
-                <ul  style={{backgroundColor: '#2f3542'}} className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item text-white" href="/admin">ADMIN</a></li>
-                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="/" tabindex="-1" aria-disabled="true">SERVICES</a>

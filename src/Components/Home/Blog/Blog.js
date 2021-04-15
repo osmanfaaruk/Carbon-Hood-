@@ -30,7 +30,7 @@ const blogData = [
 const Blog = () => {
 
     return (
-        <section className="services-container mt-5" style={{backgroundColor:"#f1f2f6"}}>
+        <section className="mt-5" style={{backgroundColor:"#f1f2f6"}}>
         <Slide left>
         <div className="text-center mt-5">
             <h2 style={{fontWeight:"700"}}>OUR SALES TEAM</h2>

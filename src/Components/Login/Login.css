@@ -1,0 +1,15 @@
+.login-section{
+    display: flex;
+    text-align: center;
+    margin-top: 13%;
+}
+.login-btn{
+    margin-top: 150px;
+    width: 500px;
+}
+.login-img img{
+    width: 70%;
+}
+.login-img{
+    margin-left: 15%;
+}

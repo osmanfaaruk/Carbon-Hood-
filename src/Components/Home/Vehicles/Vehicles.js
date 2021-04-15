@@ -45,9 +45,9 @@ const vehicleData = [
 
 const Vehicles = () => {
     return (
-        <section className="services-container mt-5">
+        <section className="services-container" style={{backgroundColor:"#f1f2f6"}}>
         <Slide left>
-        <div className="text-center mt-5">
+        <div className="text-center">
             <h2 style={{fontWeight:"700"}}>TYPES OF VEHICLES</h2>
             <p style={{fontWeight:"600"}}>THE AUTOS WE DEALS IN</p>
         </div>
