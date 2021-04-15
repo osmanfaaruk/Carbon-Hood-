@@ -46,10 +46,12 @@ const vehicleData = [
 const Vehicles = () => {
     return (
         <section className="services-container mt-5">
+        <Slide left>
         <div className="text-center mt-5">
             <h2 style={{fontWeight:"700"}}>TYPES OF VEHICLES</h2>
             <p style={{fontWeight:"600"}}>THE AUTOS WE DEALS IN</p>
         </div>
+        </Slide>
         <div className="d-flex justify-content-center mt-5">
         <Slide bottom>
         <div className="w-75 row mt-3 pt-5">

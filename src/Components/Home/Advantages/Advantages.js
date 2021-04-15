@@ -23,9 +23,11 @@ const advantagesData = [
 const Advantages = () => {
     return (
         <section className="services-container mt-5" >
+        <Slide left>
         <div className="text-center mt-5">
             <h1 style={{fontWeight:"700"}}>OUR ADVANTAGES</h1>
         </div>
+        </Slide>
         <div className="d-flex justify-content-center mt-5">
         <Slide bottom>
         <div className="w-75 row mt-3 pt-5">
