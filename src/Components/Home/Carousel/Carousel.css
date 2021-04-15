@@ -1,0 +1,20 @@
+.slider-item{
+    height:100vh;
+    min-height:300px;
+}
+.carousel-container{
+    bottom: 400px;
+}
+.carousel-container h5{
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+.carousel-container p{
+    font-size: 15px;
+    margin: auto;
+    width: 60%;
+    line-height: 1.9;
+    
+}

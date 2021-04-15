@@ -1,0 +1,41 @@
+.main-container{
+    margin-left: 50%;
+}
+.navbar-container a{
+    font-size:18px; 
+    font-weight:700;
+}
+.navbar-main .navbar-name{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing:2px;
+}
+
+/* .navbar-main .navbar-container .active > .navbar-a,
+.navbar-main .navbar-container .navbar-a.active,
+.navbar-main .navbar-container .navbar-a.show,
+.navbar-main .navbar-container .show > .navbar-a{
+    color: #fff;
+}
+.navbar-main .navbar-container .navbar-a{
+    color: #fff;
+}
+.navbar-main .navbar-container .navbar-a:focus,
+.navbar-main .navbar-container .navbar-a:hover{
+    color: #fff;
+} */
+
+.toggle-btn{
+    padding: 1px 5px;
+    font-size:18px;
+    line-height:.3;
+    background:#fff;
+}
+
+@media only screen and (max-width: 500px){
+    .main-container{
+        margin-left: 0%;
+    }
+}
