@@ -2,14 +2,13 @@ import React from 'react';
 
 const ReviewPost = (props) => {
 
-    const {name, review, status ,img} = props.reviews;
+    const {name, companyName, description} = props.reviews;
     return (
-        <div className="col-md-4 text-center">
+        <div className="col-md-4 text-center mb-5">
         
-        <p>"{review}"</p>
-        <img style={{height: '50px'}} src={img} alt="" />
+        <p>"{description}"</p>
         <h5 className="mt-3">{name}</h5>
-        <p>{status}</p>
+        <p>{companyName}</p>
     </div>
     );
 };

@@ -1,0 +1,21 @@
+.form-container input{
+    width: 150%;
+}
+.form-container{
+    margin-left: 150px;
+}
+.checkout-container{ 
+    display: flex;
+    margin-top: 80px;
+}
+.checkout-container img{ 
+   padding: 10px;
+}
+.h2{
+    color: green;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,7 @@
+.review-container{
+    display: flex;
+    margin-top: 150px;
+}
+.review-form input{
+    width: 400px;
+}

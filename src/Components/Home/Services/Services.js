@@ -1,29 +1,21 @@
-import React from 'react';
-import Repairing from '../../../Photos/AutoRepairing.png';
-import CheckUp from '../../../Photos/TransmissonCheckup.png';
-import Inspection from '../../../Photos/inspectiomn.png';
-import ServicesCard from '../ServicesCard/ServicesCard';
+import React, { useEffect, useState } from "react";
 import Slide from 'react-reveal/Slide';
+import ServicesCard from "../ServicesCard/ServicesCard";
 
-const servicesData = [
-    {
-        name: 'Auto Repairing',
-        img: Repairing,
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore efacere amet aperiam non odio. Temporibus, nemo quasi quisquam ipsa distinctio saepe sed veniam incidunt,'
-    },
-    {
-        name: 'Transmission Checkup',
-        img: CheckUp,
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore efacere amet aperiam non odio. Temporibus, nemo quasi quisquam ipsa distinctio saepe sed veniam incidunt,'
-    },
-    {
-        name: 'Vehicle Inspection',
-        img: Inspection,
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore efacere amet aperiam non odio. Temporibus, nemo quasi quisquam ipsa distinctio saepe sed veniam incidunt,'
-    }
-]
+
+
+
 
 const Services = () => {
+
+    const [service, setServices] = useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:4000/services')
+        .then(response=> response.json())
+        .then(data => setServices(data))
+    },[])
+
     return (
             <section className="services-container mt-5 bg-dark text-white" >
         <Slide left> 
@@ -35,7 +27,7 @@ const Services = () => {
         <Slide bottom>
         <div className="w-75 row mt-3 pt-5">
             {
-                servicesData.map(service => <ServicesCard services={service}></ServicesCard>)
+                service.map(service => <ServicesCard services={service}></ServicesCard>)
             }
         </div>
         </Slide>

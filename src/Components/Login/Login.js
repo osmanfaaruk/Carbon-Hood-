@@ -30,6 +30,7 @@ const Login = () => {
             setLoggedInUser(signedInUser);
             storeAuthToken();
             history.replace(from);
+            setUserToken();
             
           }).catch(function(error) {
             const errorMessage = error.message;
@@ -42,6 +43,15 @@ const Login = () => {
             sessionStorage.setItem('token', idToken);
 
         }).catch(function(error) {
+            console.log(error);
+          });
+    }
+
+
+    const setUserToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+            sessionStorage.setItem('token', idToken);
+          }).catch(function(error) {
             console.log(error);
           });
     }
