@@ -1,7 +1,7 @@
 # Site-Name : Carbob Hood 
-# Live Url= https://carbon-hood.web.app/
-# Backend live url : https://damp-wildwood-49631.herokuapp.com/
+## Live Url= https://carbon-hood.web.app/
+## Backend live url : https://damp-wildwood-49631.herokuapp.com/
 
-#  Js-Framework: React 
-# Used - 1: BootsTrap, 2: Firebase, 3:Heroku, 4:Font-Awesome, 5: React-Revel, Etc.....
- Features: 1- Animatied Site, Used Firebase Login System, Used React-Revel Fot animation.
+##  Js-Framework: React 
+Used - 1: BootsTrap, 2: Firebase, 3:Heroku, 4:Font-Awesome, 5: React-Revel, Etc.....
+Features: 1- Animatied Site, Used Firebase Login System, Used React-Revel Fot animation.
