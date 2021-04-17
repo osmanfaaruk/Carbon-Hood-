@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slide from 'react-reveal/Slide';
 import ServicesCard from "../ServicesCard/ServicesCard";
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -18,11 +19,11 @@ const Services = () => {
 
     return (
             <section className="services-container mt-5 bg-dark text-white" >
-        <Slide left> 
+        <Fade bottom> 
         <div className="text-center mt-5">
             <h2 style={{fontWeight:"700"}}>SERVICES WE PROVIDE</h2>
         </div>
-        </Slide>
+        </Fade>
         <div className="d-flex justify-content-center mt-5">
         <Slide bottom>
         <div className="w-75 row mt-3 pt-5">

@@ -1,8 +1,10 @@
+import Zoom from 'react-reveal/Zoom'
 
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import './AddServices.css';
+import uploadPic from '../../../Photos/Icons/uploadServices.svg';
 
 const AddService = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -12,6 +14,7 @@ const AddService = () => {
             serviceName: data.serviceName,
             serviceDetails: data.serviceDetails,
             serviceCost: data.serviceCost,
+            email: data.email,
             imageURL: imageURL
         }
 
@@ -42,31 +45,38 @@ const AddService = () => {
   }
 
   console.log(watch("example"));
-
+  
     return (
-        <div className="admin-container">
-        <div className=" container">
+    <Zoom>
+        <div className="admin-container container shadow p-3 mb-5 bg-body rounded ">
     <div className="upload-form">
     <form onSubmit={handleSubmit(onSubmit)}>
     <h6>Service Name</h6>
-    <input name="serviceName" placeholder="Enter Name" className="btn btn-outline-dark" style={{width:'50%'}} {...register("serviceName",{required:"This Is Required" })}  />
+    <input name="serviceName" placeholder="Enter Name" className="btn btn-outline-dark" {...register("serviceName",{required:"This Is Required" })}  />
     <br/> <br/> 
     <h6>Service Cost</h6>
-     <input style={{width:'50%'}} name="serviceCost" className="btn btn-outline-dark"  placeholder="Enter Price" 
+     <input  name="serviceCost" className="btn btn-outline-dark"  placeholder="Enter Price" 
       {...register("serviceCost",{required:"This Is Required" })}  />
       <br/> <br/> 
     <h6>Service Details</h6>
-     <input style={{width:'50%', height:'200px'}} name="serviceDetails" className="form-control text-center" placeholder="Details"  
+     <input style={{height:'200px'}} name="serviceDetails" className="form-control text-center" placeholder="Details"  
       {...register("serviceDetails",{required:"This Is Required" })} />
      <br/> <br/> 
      <h6>Demo Picture</h6> 
-     <input  style={{width:'50%'}} name="servicePicture" onChange={handleUpload} className="btn btn-outline-dark" type="file"/>
+     <input   name="servicePicture" onChange={handleUpload} className="btn btn-outline-dark" type="file"/>
      <br/> <br/> 
-    <input style={{width:'50%'}} type="submit" value="Add Service" className="btn btn-primary"  />
+     <h6>Your Email</h6>
+     <input  name="email" className="btn btn-outline-dark"  placeholder="Your Email Address" 
+      {...register("email",{required:"This Is Required" })}  />
+      <br/> <br/> 
+    <input  type="submit" value="Add Service" className="btn btn-primary"  />
      </form>
     </div>
-        </div>
+    <div>
+      <img style={{width:'600px', marginLeft:'280px', marginTop:'50px'}} src={uploadPic} alt=""/>
     </div>
+    </div>
+    </Zoom>
     );
 };
 

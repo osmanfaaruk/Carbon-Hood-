@@ -37,15 +37,15 @@ const Footer = () => {
                     <FooterDetails  key={2} menuTitle="SERVICES" menuItems={services}/>
                     <FooterDetails key={3} menuTitle="OUR TERMS" menuItems={ourTerms}/>
                     <FooterDetails key={4} menuTitle="OUR ADDRESS" menuItems={ourAddress}> 
-                        <ul className="social-media list-inline text-white">
+                        <ul className="social-media list-inline">
                             <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon className="icon active-icon" style={{backgroundColor:'blue'}} icon={faFacebookF} /></a></li>
                             <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" style={{backgroundColor:'red'}} icon={faGooglePlusG} /></a></li>
                             <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon" style={{backgroundColor:'#ff6b6b'}} icon={faInstagram} /></a></li>
                         </ul>
                     </FooterDetails>
                 </div>
-                <div className="copyRight text-center">
-                    <p>Copyright © {(new Date()).getFullYear()} Carbon Hood All Rights Reserved</p>
+                <div className="copyRight text-center ">
+                    <p className="mb-0">Copyright © {(new Date()).getFullYear()} Carbon Hood All Rights Reserved</p>
                 </div>
             </div>
         </footer>

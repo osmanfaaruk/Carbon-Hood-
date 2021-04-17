@@ -1,9 +1,12 @@
 .admin-container{
     display: flex;
-}
-.upload-form{
     margin-top:5%;
-    margin-left: 25%;
+    /* background-image: url(../../../Photos/Icons/uploadServices.svg);
+    background-size: cover; */
 }
+.upload-form input{
+    width:180%;
+}
+
 
 

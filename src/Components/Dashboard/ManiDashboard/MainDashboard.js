@@ -4,6 +4,8 @@ import AddService from "../AddService/AddService";
 import AddReview from "../../AddReview/AddReview";
 import ManageService from "../ManageService/ManageService";
 import Book from "../Book/Book";
+import OrderList from "../OrderList/OrderList";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
 
 
 
@@ -32,7 +34,12 @@ const MainDashboard = () => {
             <Route path="/dashboard/book-list">
             <Book/>
             </Route>
-            {/* <img className="img-fluid" style={{width: '600px', marginLeft:"350px", marginTop:"150px"}} src={Img} alt=""/> */}
+            <Route path="/dashboard/order-list">
+            <OrderList/>
+            </Route>
+            <Route path="/dashboard/make-admin">
+            <MakeAdmin/>
+            </Route>
           </div>
         </Switch>
       </div>

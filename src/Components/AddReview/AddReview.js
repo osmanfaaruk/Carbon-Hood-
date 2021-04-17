@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import './AddReview.css';
 import reviewPic from '../../Photos/Icons/review.svg';
 
+import Zoom from 'react-reveal/Zoom'
+
 const AddReview = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
@@ -25,7 +27,8 @@ const AddReview = () => {
 
         
     return (
-        <div className="review-container">
+        <Zoom >
+        <div className="review-container shadow p-3 mb-5 bg-body rounded">
     <div className="review-form container">
     <form onSubmit={handleSubmit(onSubmit)}>
     <h6>You Name</h6>
@@ -46,6 +49,7 @@ const AddReview = () => {
             <img src={reviewPic} alt=""/>
         </div>
     </div>
+    </Zoom>
     );
 };
 

@@ -4,6 +4,8 @@ import SalesManager from '../../../Photos/Sales Manager.png';
 import Director from '../../../Photos/Director.png';
 import BlogCard from '../BlogCard/BlogCard';
 import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+
 
 const blogData = [
     {
@@ -31,11 +33,11 @@ const Blog = () => {
 
     return (
         <section className="mt-5" style={{backgroundColor:"#f1f2f6"}}>
-        <Slide left>
+        <Fade bottom>
         <div className="text-center mt-5">
             <h2 style={{fontWeight:"700"}}>OUR SALES TEAM</h2>
         </div>
-        </Slide>
+        </Fade>
         <div className="d-flex justify-content-center mt-5">
         <Slide bottom>
         <div className="w-75 row mt-3 pt-5 blogs">

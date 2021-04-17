@@ -9,6 +9,8 @@ import Truck from '../../../Photos/pickups.png';
 import Van from '../../../Photos/van.png';
 import Slide from 'react-reveal/Slide';
 import VehicleTypes from '../VehicleTypes/VehicleTypes';
+import Fade from 'react-reveal/Fade';
+
 
 const vehicleData = [
     {
@@ -46,12 +48,12 @@ const vehicleData = [
 const Vehicles = () => {
     return (
         <section className="services-container" style={{backgroundColor:"#f1f2f6"}}>
-        <Slide left>
+        <Fade bottom>
         <div className="text-center">
             <h2 style={{fontWeight:"700"}}>TYPES OF VEHICLES</h2>
             <p style={{fontWeight:"600"}}>THE AUTOS WE DEALS IN</p>
         </div>
-        </Slide>
+        </Fade>
         <div className="d-flex justify-content-center mt-5">
         <Slide bottom>
         <div className="w-75 row mt-3 pt-5">

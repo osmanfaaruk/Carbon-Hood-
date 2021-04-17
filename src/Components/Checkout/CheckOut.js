@@ -28,7 +28,7 @@ const CheckOut = () => {
         imageURL: checkoutService.imageURL,
         date: (new Date().toDateString("dddd, mmmm, yyyy"))
     })
-    fetch('http://localhost:4000/orders', {
+    fetch('http://localhost:4000/addOrders', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(newCheckout)
