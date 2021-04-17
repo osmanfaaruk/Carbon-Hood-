@@ -14,7 +14,7 @@ const AddReview = () => {
             description: data.description,
         }
 
-        const url = `http://localhost:4000/addReview`;
+        const url = `https://damp-wildwood-49631.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',
             headers: {

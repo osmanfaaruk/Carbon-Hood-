@@ -18,7 +18,7 @@ const MakeAdmin = () => {
       email: data.email,
     };
 
-    const url = `http://localhost:4000/addService`;
+    const url = `https://damp-wildwood-49631.herokuapp.com/addService`;
     fetch(url, {
       method: "POST",
       headers: {

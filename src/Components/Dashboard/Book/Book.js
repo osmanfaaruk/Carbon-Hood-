@@ -8,7 +8,7 @@ const Book = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/bookList?email="+loggedInUser.email)
+    fetch("https://damp-wildwood-49631.herokuapp.com/bookList?email="+loggedInUser.email)
       .then((response) => response.json())
       .then((data) => setBooking(data));
   }, []);

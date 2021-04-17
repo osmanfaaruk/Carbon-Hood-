@@ -28,7 +28,7 @@ const CheckOut = () => {
         imageURL: checkoutService.imageURL,
         date: (new Date().toDateString("dddd, mmmm, yyyy"))
     })
-    fetch('http://localhost:4000/addOrders', {
+    fetch('https://damp-wildwood-49631.herokuapp.com/addOrders', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(newCheckout)
@@ -42,7 +42,7 @@ const CheckOut = () => {
 
 
   useEffect(() => {
-    const url = `http://localhost:4000/services/${serviceId}`;
+    const url = `https://damp-wildwood-49631.herokuapp.com/services/${serviceId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setCheckoutService(data));
