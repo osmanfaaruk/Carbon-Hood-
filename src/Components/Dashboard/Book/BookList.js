@@ -17,7 +17,7 @@ const BookList = (props) => {
        <h5>${serviceCost}</h5>
        <h6>Service Booked at: {date}</h6>
        <p>Check your mail for more information about booked service <br/> {email}</p>
-       <h6> {status}</h6>
+       <h6 style={{color:"green"}}> Service {status}</h6>
        </div>
        </div>
        </div>

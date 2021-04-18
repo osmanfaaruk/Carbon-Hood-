@@ -11,7 +11,7 @@ const OrderList = () => {
   }, [orderList]);
 
     const updateData = (id) => {
-      const url = `https://damp-wildwood-49631.herokuapp.com/${id}`
+      const url = `https://damp-wildwood-49631.herokuapp.com/orders/${id}`
       fetch(url, {
           method: 'POST',
           headers: {
