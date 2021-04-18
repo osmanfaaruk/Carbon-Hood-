@@ -2,7 +2,7 @@ import React from 'react';
 import './Booklist.css';
 import Zoom from 'react-reveal/Zoom'
 const BookList = (props) => {
-    const { email,serviceName, serviceCost,imageURL,date, update} = props.bookList;
+    const { email,serviceName, serviceCost,imageURL,date, status} = props.bookList;
     return (
         <Zoom>
         <div className="card mb-3 container orderList-container shadow p-3 mb-5 bg-body rounded " >
@@ -17,7 +17,7 @@ const BookList = (props) => {
        <h5>${serviceCost}</h5>
        <h6>Service Booked at: {date}</h6>
        <p>Check your mail for more information about booked service <br/> {email}</p>
-       <h6>Status {update}</h6>
+       <h6> {status}</h6>
        </div>
        </div>
        </div>

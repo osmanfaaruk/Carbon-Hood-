@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-
 const OrderList = () => {
   const [orderList, setOrderList] = useState([]);
+  const [status, setStatus] = useState([])
 
   useEffect(() => {
     fetch("https://damp-wildwood-49631.herokuapp.com/orders")
@@ -10,10 +10,30 @@ const OrderList = () => {
       .then((data) => setOrderList(data));
   }, [orderList]);
 
+    const updateData = (id) => {
+      const url = `https://damp-wildwood-49631.herokuapp.com/${id}`
+      fetch(url, {
+          method: 'POST',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(status)
+      })
+          .then(res => {
+              if (res) {
+                  console.log(res)
+                  alert('Your status has been updated successfully');
+              }
+          })
+    }
 
-  const updateStatus = data => {
-    console.log('updating', data.name);
-  }
+
+  const updateStatus = (e) => {
+    const data = {...status}
+        data[e.target.name] = e.target.value;
+        setStatus(data)
+        // setShow(true);
+    }
 
   return (
     <table class="table">
@@ -29,34 +49,24 @@ const OrderList = () => {
       <tbody>
         {orderList.map((list) => (
           <tr>
-            {/* <th scope="row">1</th> */}
             <td>{list.email}</td>
             <td>{list.serviceName}</td>
             <td>${list.serviceCost}</td>
             <td>{list.date}</td>
             <td>
-              <div className="dropdown">
-                <p
-                  className="btn btn-info dropdown-toggle"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Status
-                </p>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li>
-                    <p onClick={updateStatus}  name="On Going"className="dropdown-item">On Going</p>
-                  </li>
-                  <li>
-                    <p onClick={updateStatus} name="P" className="dropdown-item">Pending</p>
-                  </li>
-                  <li>
-                    <p onClick={updateStatus}  className="dropdown-item">Done</p>
-                  </li>
-                </ul>
-              </div>
+                <h3>
+                  <select 
+                    value={list.status}
+                    onChange={updateStatus}
+                    className="form-control text center btn btn-dark"
+                    name="status"
+                  >
+                    <option>Pending</option>
+                    <option>Shipped</option>
+                    <option>Done</option>
+                  </select>
+                </h3>
+                    <button className="btn btn-success"onClick={() => updateData(list._id)}>Update</button>
             </td>
           </tr>
         ))}
